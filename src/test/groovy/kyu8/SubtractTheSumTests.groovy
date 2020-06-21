@@ -38,5 +38,15 @@ class SubtractTheSumTests extends Specification {
             8  |  3  |  4  | false
             12 |  3  |  4  | true
     }
+
+    @Test
+    def "Reversed Strings"(String s, String sr) {
+        expect:
+            ReverseString.reverse(s) == sr
+        where:
+            s        |  sr
+            "Hello"  |  "olleH"
+            "world"  |  "dlrow"
+    }
 }
 
