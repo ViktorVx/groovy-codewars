@@ -3,7 +3,7 @@ package kyu8
 import org.junit.Test
 import spock.lang.Specification
 
-class SubtractTheSumTests extends Specification {
+class Kyu8Tests extends Specification {
 
     @Test
     def "test SubtractTheSum"(int n, String s) {
