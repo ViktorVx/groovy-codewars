@@ -18,4 +18,17 @@ class Kyu7Tests extends Specification {
             "Code Wars"       | [['C', 1], ['o', 1], ['d', 1], ['e', 1], [' ', 1], ['W', 1], ['a', 1], ['r', 1], ['s', 1]]
     }
 
+    @Test
+    def "Alphabetical Addition"(letters, sum) {
+        expect:
+            AlphabeticalAddition.addLetters(letters) == sum
+        where:
+            letters         | sum
+            ['a', 'b', 'c'] | 'f'
+            ['a', 'b']      | 'c'
+            ['z']           | 'z'
+            []              | 'z'
+            ['z', 'a']      | 'a'
+    }
+
 }
