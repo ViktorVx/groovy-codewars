@@ -48,5 +48,15 @@ class Kyu8Tests extends Specification {
             "Hello"  |  "olleH"
             "world"  |  "dlrow"
     }
+
+    @Test
+    def "Expressions Matter"(a, b, c, s) {
+        expect:
+            ExpressionsMatter.expressionMatter(a, b, c) == s
+        where:
+            a | b | c | s
+            1 | 2 | 3 | 9
+            1 | 1 | 1 | 3
+    }
 }
 
