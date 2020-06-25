@@ -58,5 +58,20 @@ class Kyu8Tests extends Specification {
             1 | 2 | 3 | 9
             1 | 1 | 1 | 3
     }
+
+    @Test
+    def "Odd or Even?"(l, s) {
+        expect:
+            OddOrEven.oddOrEven(l) == s
+        where:
+            l           | s
+            [0]         | "even"
+            []          | "even"
+            [1, 1]      | "even"
+            [1]         | "odd"
+            [0, 1, 4]   | "odd"
+            [0, -1, -4] | "odd"
+            [0,  1, -4] | "odd"
+    }
 }
 
