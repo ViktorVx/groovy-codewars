@@ -20,4 +20,5 @@ class Kyu4Tests extends Specification {
             0         | "now"
             6070432   | "70 days, 6 hours, 13 minutes and 52 seconds"
     }
+
 }
